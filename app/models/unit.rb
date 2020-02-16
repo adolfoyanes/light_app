@@ -1,5 +1,6 @@
 class Unit < ApplicationRecord
-
+	validates_uniqueness_of :name
+	
 	def self.load_data(url)
 		require 'brews_gem'
 		response = BrewsGem::Breweries.call(url)
