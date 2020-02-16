@@ -1,0 +1,10 @@
+studio:
+  price: 149.99
+  name: Studio Unit
+  area: 37
+  uom: sqm
+  description: |
+    <ul>
+      <li>Next to MRT station</li>
+      <li>Amenities include swimming pool and 24/7 security</li>
+    </ul>

@@ -1,0 +1,131 @@
+
+<div class="container-fluid mycontainer">
+	<h4>Coolest breweries</h4>
+	<div class="row">
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<button class="btn btn-success" onclick="GetData()">Get Breweries</button>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<button class="btn btn-danger" onclick="DeleteData()">Delete Breweries </button>
+		</div>
+	</div>
+	<table class="table table-striped mytable">
+		<thead>
+			<th>Name</th>
+			<th>Beer Price</th>
+			<th>Description</th>
+			<th>Factory Size</th>
+			<th>Unit of Measure</th>
+		</thead>
+		<tbody>
+			<% @units.each do |u| %>
+				<tr>
+					<td><%= u.name %></td>
+					<td>USD <%= u.price %></td>
+					<td><%= u.description %></td>
+					<td><%= u.area %></td>
+					<td><%= u.uom %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+
+<div id="spinner" class=""></div>
+
+<style>
+.mycontainer{
+	margin: 30px;
+}
+.mytable{
+	margin-top: 20px;
+}
+
+.hm-spinner{
+  height: 160px;
+  width: 160px;
+  border: 8px solid transparent;
+  border-top-color: #9C27B0;
+  border-bottom-color: #9C27B0;
+  border-radius: 50%;
+  position: fixed;
+  -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
+  top:45%;
+  left:45%;
+  z-index: 999;
+}
+
+.hm-spinner::before{
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  border: 6px solid transparent;
+  border-top-color: #BA68C8;
+  border-bottom-color: #BA68C8;
+  border-radius: 50%;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+</style>
+
+<script>
+function DeleteData(){
+	$('#spinner').addClass('hm-spinner');
+	$.ajax({
+    type:"DELETE", 
+    url:"<%= url_for units_path %>" , 
+    data: { "authenticity_token": AUTH_TOKEN},
+    dataType: 'json',
+    success:function(result){  
+    	// alert(result)
+    	location.reload();
+    },
+    error:function(err){
+
+    }
+  });
+};
+
+function GetData(){
+	$('#spinner').addClass('hm-spinner');
+	$.ajax({
+    type:"GET", 
+    url:"<%= url_for units_load_path %>" , 
+    data: { "authenticity_token": AUTH_TOKEN},
+    dataType: 'json',
+    success:function(result){  
+    	// alert(result)
+    	location.reload();
+    },
+    error:function(err){
+
+    }
+  });
+};
+</script>

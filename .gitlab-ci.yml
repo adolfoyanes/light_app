@@ -1,0 +1,13 @@
+image: ruby:latest
+
+stages:
+  - test
+
+test:
+  variables:
+    RAILS_ENV: test
+  script:
+    - bundle install
+    - bundle exec rails test
+  tags:
+    - kubernetes

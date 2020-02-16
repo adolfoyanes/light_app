@@ -1,0 +1,137 @@
+{
+    "units": [
+        {
+            "id": "ef40d277-fb54-41ea-85cc-e4bdd5c3179a",
+            "price": 75,
+            "name": "206",
+            "description": "24 Hour Access, Alarm, Covered, Humidity Controlled",
+            "width": 5,
+            "length": 10,
+            "height": 8,
+            "door_height": 8,
+            "door_width": 3,
+            "door_type": "swing",
+            "access_type": "indoor",
+            "floor": null,
+            "size": "5x10x8",
+            "area": 50,
+            "standard_rate": 75,
+            "managed_rate": null,
+            "available_for_move_in": false,
+            "rentable": true,
+            "status": "reserved",
+            "payment_status": null,
+            "current_ledger_id": null,
+            "current_tenant_id": null,
+            "combination_lock_number": null,
+            "attribute_description": null,
+            "deleted": false,
+            "damaged": false,
+            "complimentary": null,
+            "channel_rate": null,
+            "unit_amenities": [
+                {
+                    "id": "90bcd6c2-2723-44c7-a4b9-919a919838de",
+                    "name": "Alarm",
+                    "short_code": null,
+                    "show_in_sales_center_filter_dropdown": false
+                },
+                {
+                    "id": "5e0467e1-f5a9-439b-95d9-f7c48667a43e",
+                    "name": "Humidity Controlled",
+                    "short_code": null,
+                    "show_in_sales_center_filter_dropdown": false
+                },
+                {
+                    "id": "aac088f4-8d9d-4c91-95ad-2d788edfa85c",
+                    "name": "24 Hour Access",
+                    "short_code": null,
+                    "show_in_sales_center_filter_dropdown": false
+                },
+                {
+                    "id": "31605196-7fe7-472e-a9ae-2a1b6e2541d5",
+                    "name": "Covered",
+                    "short_code": null,
+                    "show_in_sales_center_filter_dropdown": false
+                }
+            ],
+            "unit_group_id": "IPNZZKLLWGSMAZTLJKTD"
+        },
+        {
+            "id": "c0694752-70f2-4e3c-b9a7-056fd562fda8",
+            "price": 75,
+            "name": "207",
+            "description": "Alarm, Humidity Controlled, 24 Hour Access, Covered",
+            "width": 5,
+            "length": 10,
+            "height": 8,
+            "door_height": 8,
+            "door_width": 3,
+            "door_type": "swing",
+            "access_type": "indoor",
+            "floor": null,
+            "size": "5x10x8",
+            "area": 50,
+            "standard_rate": 75,
+            "managed_rate": null,
+            "available_for_move_in": false,
+            "rentable": true,
+            "status": "occupied",
+            "payment_status": "overlocked",
+            "current_ledger_id": "6cdc6189-dfb4-4efe-8465-ac8648b0120d",
+            "current_tenant_id": "c7e7a213-c491-4999-bb24-643dd5db67bb",
+            "combination_lock_number": null,
+            "attribute_description": null,
+            "deleted": false,
+            "damaged": false,
+            "complimentary": false,
+            "channel_rate": null,
+            "unit_amenities": [
+                {
+                    "id": "90bcd6c2-2723-44c7-a4b9-919a919838de",
+                    "name": "Alarm",
+                    "short_code": null,
+                    "show_in_sales_center_filter_dropdown": false
+                },
+                {
+                    "id": "5e0467e1-f5a9-439b-95d9-f7c48667a43e",
+                    "name": "Humidity Controlled",
+                    "short_code": null,
+                    "show_in_sales_center_filter_dropdown": false
+                },
+                {
+                    "id": "aac088f4-8d9d-4c91-95ad-2d788edfa85c",
+                    "name": "24 Hour Access",
+                    "short_code": null,
+                    "show_in_sales_center_filter_dropdown": false
+                },
+                {
+                    "id": "31605196-7fe7-472e-a9ae-2a1b6e2541d5",
+                    "name": "Covered",
+                    "short_code": null,
+                    "show_in_sales_center_filter_dropdown": false
+                }
+            ],
+            "unit_group_id": "IPNZZKLLWGSMAZTLJKTD"
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "current_page": 1,
+            "total_pages": 1,
+            "per_page": 2,
+            "total_entries": 99,
+            "previous_page": null,
+            "next_page": null
+        },
+        "status_code": 200,
+        "status_message": "OK",
+        "status_cat": "https://http.cat/200",
+        "request_method": "GET",
+        "request_id": "747bf65c-9c68-45e9-b680-059ee3153436",
+        "parameters": {
+            "facility_id": "98d0f27e-aa50-4c9b-848c-ef644f18d7ca",
+            "unit": {}
+        }
+    }
+}
