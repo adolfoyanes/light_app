@@ -6,6 +6,8 @@ class Unit < ApplicationRecord
 		success = []
 		failures = []
 		response.formatted_breweries.each do |x|
+			exists = Unit.find_by_name(x["name"])
+			next if exists.present? 
 			un = Unit.new 
 	  	un.price = x["price"]
 	  	un.name = x["name"]
